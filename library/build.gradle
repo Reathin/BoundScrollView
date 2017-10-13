@@ -35,6 +35,7 @@ install {
         pom {
             project {
                 packaging 'jar'
+                artifactId  'boundscrollview'
                 //添加项目描述
                 name 'BoundScrollView for Android'
                 url siteUrl
@@ -50,7 +51,7 @@ install {
                 developers {
                     developer {
                         id 'rairmmd '
-                        name 'Rair'
+                        name 'rairmmd'
                         email 'rairmmd@gmail.com'
                     }
                 }
@@ -86,7 +87,7 @@ artifacts {
     archives sourcesJar
 }
 javadoc { //jav doc采用utf-8编码否则会报“GBK的不可映射字符”错误
-    options{
+    options {
         encoding "UTF-8"
         charSet 'UTF-8'
     }

@@ -13,7 +13,7 @@ import android.widget.ScrollView;
  * ScrollView
  * 类名：带有反弹效果的scrollview
  */
-public class BounceScrollView extends ScrollView {
+public class BoundScrollView extends ScrollView {
     private View inner;// 子View
 
     private float y;// 点击时y坐标
@@ -22,7 +22,7 @@ public class BounceScrollView extends ScrollView {
 
     private boolean isCount = false;// 是否开始计算
 
-    public BounceScrollView(Context context, AttributeSet attrs) {
+    public BoundScrollView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
