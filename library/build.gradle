@@ -37,7 +37,7 @@ install {
         pom {
             project {
                 packaging 'aar'
-                name 'boundscrollview'
+                name 'BoundScrollView'
                 description 'BoundScrollView for Android,likes IOS style'
                 // #CONFIG# // project title
                 url siteUrl
