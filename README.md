@@ -4,7 +4,7 @@
 ### 使用
 Gradle
 ```
-compile 'com.rairmmd:boundscrollview:1.0.0'
+compile 'com.rairmmd.boundscrollview:library:1.0.0'
 ```
 
 ### 布局中
