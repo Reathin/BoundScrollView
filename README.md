@@ -8,7 +8,7 @@ compile 'com.rairmmd.boundscrollview:library:1.0.0'
 ```
 
 ### 布局中
-和ScrollView一样
+和ScrollView一样使用
 ```
 <com.rairmmd.boundscrollview.BoundScrollView
     android:layout_width="match_parent"
@@ -18,3 +18,6 @@ compile 'com.rairmmd.boundscrollview:library:1.0.0'
     ···
 </com.rairmmd.boundscrollview.BoundScrollView>
 ```
+
+### 截图
+
