@@ -20,4 +20,6 @@ compile 'com.rairmmd.boundscrollview:library:1.0.0'
 ```
 
 ### 截图
+![1]
 
+[1]:https://github.com/Rairmmd/BoundScrollView/blob/master/screenshot/test3.gif?raw=true
