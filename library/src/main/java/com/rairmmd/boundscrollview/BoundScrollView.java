@@ -14,13 +14,22 @@ import android.widget.ScrollView;
  * 类名：带有反弹效果的scrollview
  */
 public class BoundScrollView extends ScrollView {
-    private View inner;// 子View
-
-    private float y;// 点击时y坐标
-
-    private Rect normal = new Rect();// 矩形(这里只是个形式，只是用于判断是否需要动画.)
-
-    private boolean isCount = false;// 是否开始计算
+    /**
+     * 子View
+     */
+    private View inner;
+    /**
+     * 点击时y坐标
+     */
+    private float y;
+    /**
+     * 矩形(这里只是个形式，只是用于判断是否需要动画.)
+     */
+    private Rect normal = new Rect();
+    /**
+     * 是否开始计算
+     */
+    private boolean isCount = false;
 
     public BoundScrollView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -41,6 +50,7 @@ public class BoundScrollView extends ScrollView {
     /***
      * 监听touch
      */
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         if (inner != null) {
@@ -53,13 +63,10 @@ public class BoundScrollView extends ScrollView {
     /***
      * 触摸事件
      *
-     * @param ev
      */
     public void commOnTouchEvent(MotionEvent ev) {
         int action = ev.getAction();
         switch (action) {
-            case MotionEvent.ACTION_DOWN:
-                break;
             case MotionEvent.ACTION_UP:
                 if (isNeedAnimation()) {
                     animation();
@@ -67,11 +74,15 @@ public class BoundScrollView extends ScrollView {
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
-                final float preY = y;// 按下时的y坐标
-                float nowY = ev.getY();// 时时y坐标
-                int deltaY = (int) (preY - nowY);// 滑动距离
+                // 按下时的y坐标
+                final float preY = y;
+                // 时时y坐标
+                float nowY = ev.getY();
+                // 滑动距离
+                int deltaY = (int) (preY - nowY);
                 if (!isCount) {
-                    deltaY = 0; // 在这里要归0.
+                    // 在这里要归0.
+                    deltaY = 0;
                 }
                 y = nowY;
                 // 当滚动到最上或者最下时就不会再滚动，这时移动布局
@@ -107,7 +118,9 @@ public class BoundScrollView extends ScrollView {
         normal.setEmpty();
     }
 
-    // 是否需要开启动画
+    /**
+     * 是否需要开启动画
+     */
     public boolean isNeedAnimation() {
         return !normal.isEmpty();
     }
